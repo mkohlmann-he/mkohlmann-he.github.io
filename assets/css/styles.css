@@ -1,0 +1,38 @@
+.greyback {
+	background-color: #EEEEEE;
+}
+
+.borderRad {
+	border-radius:15px;
+}
+
+.InterestBack {
+	display: inline-block;
+	width: 31%;
+	min-height: 100%;
+	height: 100%;
+	background-color: #BBBBBB;
+	margin: 10px;
+	border-radius:15px;
+	vertical-align: middle;
+
+
+}
+
+.CodeBack {
+	background-color: #BBBBBB;
+	margin: 10px;
+	border-radius:15px;
+}
+
+.centerVert {
+	min-height: 100%
+}
+
+.VertFill{
+	min-height: 100%;
+	height: 100%;
+	vertical-align: middle;
+
+
+}
