@@ -150,7 +150,7 @@ $(document).ready(pager(blogPageNumber));
 $(document).ready(function(){
 	$("#search2").keypress(function(e)
 		{
-		console.log("Search Key Triggered");
+		console.log("Search Key Triggered" + $("#search2").val());
 		
 		});
 });
