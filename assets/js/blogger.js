@@ -60,9 +60,9 @@ function pager(page){
 	    // Figure out the index numbers to display
 	    startIndex = (page * 5 - 5);
 	    stopIndex = (page * 5 - 1);
-	    if (stopIndex > entries.length) 
+	    if (stopIndex >= entries.length) 
 	    {
-	    	stopIndex = entries.length;
+	    	stopIndex = entries.length -1;
 	    };
 
 
