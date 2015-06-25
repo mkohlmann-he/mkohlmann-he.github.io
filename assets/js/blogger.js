@@ -148,7 +148,7 @@ $(document).ready(pager(blogPageNumber));
 
 // SearchBox Control,  On change character pressed
 $(document).ready(function(){
-	$("#search2").keypress(function(e)
+	$("#search2").onchange(function()
 		{
 		console.log("Search Key Triggered" + $("#search2").val());
 		
