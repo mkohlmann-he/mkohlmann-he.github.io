@@ -1,4 +1,4 @@
-var blogPageNumber = 2;
+var blogPageNumber = 1;
 
 function getblog() {
 // Blog entry should be diplayed with the following format:
@@ -86,8 +86,14 @@ function pager(page){
 			entryHTML += '<a id="previousButton" href="javascript:previousButton()"><= PREVIOUS </a>'
 		};
 
+		// if on a middle page, Add some seperation space
+		if (page >1 && stopIndex < (entries.length - 2)) {
+			entryHTML += '<text> --- </text>'
+		};
+
+
 		// if on the last page, dont include the next button
-		if (stopIndex < (entries.length -1)) {
+		if (stopIndex < (entries.length - 2)) {
 			entryHTML += '<a id="nextButton" href="javascript:nextButton()"> NEXT =></a>'
 		};
 
