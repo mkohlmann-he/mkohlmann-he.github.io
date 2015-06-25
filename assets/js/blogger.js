@@ -35,7 +35,7 @@ function getblog() {
 function convertEntryToHTML (entry, key) {
 	//console.log(entry);
 	textEntry = 
-		"<div id='" + key + "' class='col-sm-12 blogpost'>" +
+		"<div id='" + key + "' class='col-sm-12 blogpost greyback borderRad'>" +
 		"<small>" +
 			"<p class='muted' style='float:right;'>" + entry["date"] + "</p>" +
   		"</small>" +
