@@ -20,7 +20,8 @@ function getblog() {
 	    for (i in entries) {
 			entry = entries[i];
 			console.log(entry);
-			entryHTML += convertEntryToHTML(entry);
+			key = "key" + (i+1);
+			entryHTML += convertEntryToHTML(entry, key);
 		};
 		document.getElementById("blog").innerHTML = entryHTML;
 	});
@@ -32,9 +33,10 @@ function getblog() {
 
 
 
-function convertEntryToHTML (entry) {
+function convertEntryToHTML (entry, key) {
 	//console.log(entry);
 	textEntry = 
+		"<div id='" + key + "' class='col-sm-12 blogpost'>" +
 		"<small>" +
 			"<p class='muted' style='float:right;'>" + entry["date"] + "</p>" +
   		"</small>" +
