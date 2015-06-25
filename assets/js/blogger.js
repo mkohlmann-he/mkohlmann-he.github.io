@@ -62,10 +62,14 @@ function pager(page){
 	    stopIndex = (page * 5 - 1);
 	    if (stopIndex >= entries.length) 
 	    {
-	    	stopIndex = entries.length -1;
+	    	stopIndex = (entries.length - 1);
 	    };
 
-
+	    // Debug
+	    console.log(entries.length);
+	    console.log(startIndex + " to " + stopIndex);
+	    
+	    // Loop though the Start/Stop Indexed pages
 	    for (var i = startIndex; i <= stopIndex; ++i) 
 	    {
 			entry = entries[i];
@@ -74,19 +78,23 @@ function pager(page){
 			entryHTML += convertEntryToHTML(entry, key);
 		};
 
-
+		// Build Previous/Next buttons
 		entryHTML += "<div class='col-sm-12 blogpost'><p><center>"
 		
+		// if on page 1 don't include the Previous button
 		if (page != 1) {
 			entryHTML += '<a id="previousButton" href="javascript:previousButton()"><= PREVIOUS </a>'
 		};
 
-		if (stopIndex < entries.length) {
+		// if on the last page, dont include the next button
+		if (stopIndex < (entries.length -1)) {
 			entryHTML += '<a id="nextButton" href="javascript:nextButton()"> NEXT =></a>'
 		};
 
-
+		// close the HTML
 		entryHTML += "</p></div>"
+
+		// Write the HTML to the webpage
 		document.getElementById("blog").innerHTML = entryHTML;
 	});
 
