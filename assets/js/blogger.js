@@ -1,3 +1,5 @@
+var blogPageNumber = 2;
+
 function getblog() {
 // Blog entry should be diplayed with the following format:
 // <div id='key' class='col-sm-12 blogpost'> 
@@ -72,14 +74,19 @@ function pager(page){
 			entryHTML += convertEntryToHTML(entry, key);
 		};
 
-		if (page === 1) {
-			alert("No Previous");
+
+		entryHTML += "<div class='col-sm-12 blogpost'><p>"
+		
+		if (page != 1) {
+			entryHTML += '<a id="previousButton"><= PREVIOUS</a>'
 		};
 
-		if (stopIndex >= entries.length) {
-			alert("No Next");
+		if (stopIndex < entries.length) {
+			entryHTML += '<a id="nextButton">NEXT =></a>'
 		};
 
+
+		entryHTML += "</p></div>"
 		document.getElementById("blog").innerHTML = entryHTML;
 	});
 
@@ -90,4 +97,4 @@ function pager(page){
 
 
 
-$(document).ready(pager(1));
+$(document).ready(pager(blogPageNumber));
