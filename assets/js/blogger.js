@@ -16,13 +16,13 @@ function getblog() {
 
 	$.getJSON("../../entries.json", function(json) {
 	    entries = json[0];
-		});
+		for (i in entries) {
+			entry = entries[i];
+			entryHTML += convertEntryToHTML(entry);
+		};
+		document.getElementById("blog").innerHTML = entryHTML;
+	});
 	
-	for (i in entries) {
-		entry = entries[i];
-		entryHTML += convertEntryToHTML(entry);
-	};
-	document.getElementById("blog").innerHTML = entryHTML;
 };
 
 
