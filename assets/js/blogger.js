@@ -16,7 +16,7 @@ function getblog() {
 
 	$.getJSON("../../entries.json", function(json) {
 	    entries = json[0];
-	    console.log(entires);
+	    console.log(entries);
 	    for (i in entries) {
 			entry = entries[i];
 			console.log(entry);
