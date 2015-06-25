@@ -52,7 +52,7 @@ function pager(page){
 	entryHTML = "";
 	$.getJSON("../../entries.json", function(json) {
 	    entries = json["entries"];
-	    console.log(entries);
+	    //console.log(entries);
 	    console.log(page);
 	    
 	    // Figure out the index numbers to display
@@ -76,7 +76,7 @@ function pager(page){
 			alert("No Previous");
 		};
 
-		if (stopInxed >= entires.length) {
+		if (stopIndex >= entires.length) {
 			alert("No Next");
 		};
 
