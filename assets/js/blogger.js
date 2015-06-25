@@ -79,7 +79,7 @@ function pager(page){
 		};
 
 		// Build Previous/Next buttons
-		entryHTML += "<div class='col-sm-12 blogpost'><p><center>"
+		entryHTML += "<div class='col-sm-12 blogpost greyback borderRad'><p><center>"
 		
 		// if on page 1 don't include the Previous button
 		if (page != 1) {
