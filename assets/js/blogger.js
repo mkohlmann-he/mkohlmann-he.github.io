@@ -75,14 +75,14 @@ function pager(page){
 		};
 
 
-		entryHTML += "<div class='col-sm-12 blogpost'><p>"
+		entryHTML += "<div class='col-sm-12 blogpost'><p><center>"
 		
 		if (page != 1) {
-			entryHTML += '<a id="previousButton"><= PREVIOUS</a>'
+			entryHTML += '<a id="previousButton" href="javascript:previousButton()"><= PREVIOUS </a>'
 		};
 
 		if (stopIndex < entries.length) {
-			entryHTML += '<a id="nextButton">NEXT =></a>'
+			entryHTML += '<a id="nextButton" href="javascript:nextButton()"> NEXT =></a>'
 		};
 
 
@@ -94,6 +94,18 @@ function pager(page){
 
 };
 
+function previousButton() {
+	if (blogPageNumber > 1) 
+	{
+		--blogPageNumber;
+		pager(blogPageNumber);
+	};
+};
+
+function nextButton() {
+		++blogPageNumber;
+		pager(blogPageNumber);
+};
 
 
 
