@@ -9,11 +9,8 @@ function getblog() {
 //   <hr/>
 // </div>
 
+	console.log("Debug: getblog")
 	entryHTML = "";
-
-	// Add Code to read the entries...
-
-
 	$.getJSON("../../entries.json", function(json) {
 	    entries = json["entries"];
 	    console.log(entries);
@@ -50,7 +47,45 @@ function convertEntryToHTML (entry, key) {
 
 
 
+function pager(page){
+	console.log("Debug: pager")
+	entryHTML = "";
+	$.getJSON("../../entries.json", function(json) {
+	    entries = json["entries"];
+	    console.log(entries);
+	    console.log(page);
+	    
+	    // Figure out the index numbers to display
+	    startIndex = parseint(page*5);
+	    stopIndex = parseint(page*5 + 5);
+	    if (stopIndex > entries.length) {
+	    	stopIndex = entries.length;
+	    };
+
+
+	    for (var i = startIndex; i <= stopIndex; ++i) {
+			entry = entries[i];
+			console.log(entry);
+			key = "key" + (i+1);
+			entryHTML += convertEntryToHTML(entry, key);
+		};
+
+		if (page === 1) {
+			alert("No Previous");
+		};
+
+		if (stopInxed >= entires.length) {
+			alert("No Next");
+		};
+
+		document.getElementById("blog").innerHTML = entryHTML;
+	});
 
 
 
-$(document).ready(getblog);
+};
+
+
+
+
+$(document).ready(pager);
