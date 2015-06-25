@@ -1,15 +1,6 @@
 var blogPageNumber = 1;
 
 function getblog() {
-// Blog entry should be diplayed with the following format:
-// <div id='key' class='col-sm-12 blogpost'> 
-//   <small>
-//     <p class='muted' style='float:right;'>Post date will go here.</p>
-//   </small>
-//   <h5>Post title will go here.</h5>
-//   <p>Post content will go here.</p>
-//   <hr/>
-// </div>
 
 	console.log("Debug: getblog")
 	entryHTML = "";
@@ -32,23 +23,13 @@ function getblog() {
 
 
 
-function convertEntryToHTML (entry, key) {
-	//console.log(entry);
-	textEntry = 
-		"<div id='" + key + "' class='col-sm-12 blogpost greyback borderRad'>" +
-		"<small>" +
-			"<p class='muted' style='float:right;'>" + entry["date"] + "</p>" +
-  		"</small>" +
-  		"<h4>" + entry["title"] +"</h4>" +
-  		"<p>" + entry["text"] + "</p>" +
-  		"<hr/>" +
-  		"</div>";
-
-  	return textEntry;
-};
 
 
 
+
+//
+// PAGER FUNCTIONS
+//
 function pager(page){
 	console.log("Debug: pager")
 	entryHTML = "";
@@ -103,9 +84,30 @@ function pager(page){
 		// Write the HTML to the webpage
 		document.getElementById("blog").innerHTML = entryHTML;
 	});
+};
 
+function convertEntryToHTML (entry, key) {
+	// Blog entry should be diplayed with the following format:
+	// 	<div id='key' class='col-sm-12 blogpost'> 
+	// 		<small>
+	//     		<p class='muted' style='float:right;'>Post date will go here.</p>
+	//   	</small>
+	//   	<h5>Post title will go here.</h5>
+	//   	<p>Post content will go here.</p>
+	//   	<hr/>
+	// 	</div>
 
+	textEntry = 
+		"<div id='" + key + "' class='col-sm-12 blogpost greyback borderRad'>" +
+		"<small>" +
+			"<p class='muted' style='float:right;'>" + entry["date"] + "</p>" +
+  		"</small>" +
+  		"<h4>" + entry["title"] +"</h4>" +
+  		"<p>" + entry["text"] + "</p>" +
+  		"<hr/>" +
+  		"</div>";
 
+  	return textEntry;
 };
 
 function previousButton() {
@@ -123,4 +125,33 @@ function nextButton() {
 
 
 
+
+
+
+
+
+//
+// SEARCH FUNCTIONS
+//
+function getselection () {
+
+
+
+
+};
+
+
+
+
+
 $(document).ready(pager(blogPageNumber));
+
+// SearchBox Control,  On change character pressed
+$(document).ready(function(){
+	$("#search2").keypress(function(e){
+		console.log("Search Key Triggered");
+		
+		};
+	
+	});
+});
