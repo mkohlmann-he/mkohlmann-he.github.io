@@ -14,8 +14,8 @@ function getblog() {
 	// Add Code to read the entries...
 
 
-	$.getJSON("entries.json", function(json) {
-	    entries = json[0]);
+	$.getJSON("../../entries.json", function(json) {
+	    entries = json[0];
 		});
 	
 	for (i in entries) {
