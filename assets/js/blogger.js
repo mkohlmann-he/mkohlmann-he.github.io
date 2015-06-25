@@ -42,7 +42,8 @@ function convertEntryToHTML (entry, key) {
   		"</small>" +
   		"<h4>" + entry["title"] +"</h4>" +
   		"<p>" + entry["text"] + "</p>" +
-  		"<hr/>";
+  		"<hr/>" +
+  		"</div>";
 
   	return textEntry;
 };
