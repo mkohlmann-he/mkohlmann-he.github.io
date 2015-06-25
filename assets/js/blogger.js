@@ -56,8 +56,8 @@ function pager(page){
 	    console.log(page);
 	    
 	    // Figure out the index numbers to display
-	    startIndex = parseint(page*5);
-	    stopIndex = parseint(page*5 + 5);
+	    startIndex = parseint (page*5);
+	    stopIndex = parseint (page*5 + 5);
 	    if (stopIndex > entries.length) {
 	    	stopIndex = entries.length;
 	    };
@@ -88,4 +88,4 @@ function pager(page){
 
 
 
-$(document).ready(pager);
+$(document).ready(pager(1));
