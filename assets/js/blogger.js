@@ -16,8 +16,10 @@ function getblog() {
 
 	$.getJSON("../../entries.json", function(json) {
 	    entries = json[0];
-		for (i in entries) {
+	    console.log(entires);
+	    for (i in entries) {
 			entry = entries[i];
+			console.log(entry);
 			entryHTML += convertEntryToHTML(entry);
 		};
 		document.getElementById("blog").innerHTML = entryHTML;
