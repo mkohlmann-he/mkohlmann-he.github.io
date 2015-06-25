@@ -56,14 +56,16 @@ function pager(page){
 	    console.log(page);
 	    
 	    // Figure out the index numbers to display
-	    startIndex = parseint (page*5);
-	    stopIndex = parseint (page*5 + 5);
-	    if (stopIndex > entries.length) {
+	    startIndex = (page * 5);
+	    stopIndex = (page * 5 + 5);
+	    if (stopIndex > entries.length) 
+	    {
 	    	stopIndex = entries.length;
 	    };
 
 
-	    for (var i = startIndex; i <= stopIndex; ++i) {
+	    for (var i = startIndex; i <= stopIndex; ++i) 
+	    {
 			entry = entries[i];
 			console.log(entry);
 			key = "key" + (i+1);
