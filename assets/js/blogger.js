@@ -76,7 +76,7 @@ function pager(page){
 			alert("No Previous");
 		};
 
-		if (stopIndex >= entires.length) {
+		if (stopIndex >= entries.length) {
 			alert("No Next");
 		};
 
