@@ -147,8 +147,9 @@ function getselection () {
 $(document).ready(pager(blogPageNumber));
 
 // SearchBox Control,  On change character pressed
-$(document).ready(function(){
-	$("#search2").onchange(function()
+$(document).ready(function()
+	{
+	$("#search2").on('input propertychange paste', function()
 		{
 		console.log("Search Key Triggered" + $("#search2").val());
 		
