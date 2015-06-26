@@ -85,6 +85,21 @@
         "date":"6/23/2015",
         "title":"Javascript Day 2",
         "text":"Objects and Functions:<br>------------------<br>So, 15+ years ago when I was first introduced to Javascript, it felt like it wasn't a real programming language. It was just something to tweak and add a little functionality to the HTML. Today, Javascript feels like a real language. I'm not sure how deep it can go, but it really is almost on-par with Python in terms of funcionality. from what I've seen, the few things it doesn't do out of the box is accessing things like file storage (obviously), and to seems like python has better user interface in terms of graphics, keyboard inputs, etc.<br><br>We also introduce real for-loops, boolean tertiary statements, date functions. My problem going forward is going to be remembering semi-colons after each line."
+        },
+        {
+        "date":"6/24/2015",
+        "title":"Javascript Day 3",
+        "text":"Javascript Forms:<br>------------------<br>Javascript has the same forms that they had 10 years ago, (text boxes, buttons, etc), but jQuery added a ton of functionality like the ability to recognize clicks on things other than buttons (example: hide a div when you just click on the raw text within it). jQuery also makes it easier to acess the objects on the page with .text .val(). It doesn't need to be just a text box. You can create and display HTML, forms, buttons, anything on the fly."
+        },
+        {
+        "date":"6/25/2015",
+        "title":"Javascript Day 4",
+        "text":"Updating the Blog:<br>------------------<br>Today we are updating our blog to add a lot of new functionality. The things we need to add is a way to read out blogs from the JSON file into our homepage and display it. jQueries .getJSON() function runs asynchronously, so you have to accomodate for this. If you need to use the data at anypoint (ie. to display our blog) you need to wait for the read to finish, because otherwise your javascript will just keep running without realizing it hasn't been read yet. You could just use a timeout timer, but to do it properly you should wait for the JSON.complete flag, as a trigger for other events.<br><br>In addition to reading the blog, we need to split it (the instructors are calling it pagination?) into sections of 5 pages. Finally, we need to be able to search through all the blogs and display only the blogs that match our search field. In addition we need to add some animations to hide the main homepage when we start searching, and only show our search results."
+        },
+        {
+        "date":"6/23/2015",
+        "title":"Javascript Day 5",
+        "text":"SUCCESS!!:<br>------------------<br>Finally, got the all the search functionallity and hide-show requirements in the Lab. It actually looks really cool, and responds really well. It is amazing how far HTML/Javascript advanced in the past 10 years. What used to require Adobe Flash can now be done in basic HTML5, CSS, and jquery, out of the box, for free. I am literally speachless."
         }
 
     ]

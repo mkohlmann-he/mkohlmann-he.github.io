@@ -59,11 +59,11 @@
 		</div>
 	</nav>
 
-	<div class="row">
+	<div class="row" id="welcomeSection">
 		<div class="col-md-7">
 			<h2>Welcome!</h2>
 			<p>You've reached my student repository for <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> in Brookfield, WI.
-			<p>I am currently attending <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> and this blog is one of our labs using CSS, and HTML, with a little Javascript powering the blog. By the end of our bootcamp, we will have done Python, some front and back end web developement, and a solid core of our time doing C# programming.</p>
+			<p>I am currently attending <a href="http://www.devcodecamp.com/" target="_blank">devCodeCamp</a> and this blog is one of our labs using HTML5, CSSs, Javascript and jQuery. By the end of our bootcamp, we will have done Python, some front and back end web developement, and a majority of our time spent doing C# programming.</p>
 			<p>This page will be a temporary portfolio until I am ready to create a new one, seperate from devCodeCamp. In the mean-time, please feel free to enjoy my Git-Hub repositry. Much of the code was done quickly, and should be refactored. Some of the code was team-coding and not done by me. But please, feel free to look around.
 			<center>
 			<p><br /><strong><a href="#blog">Follow my progress at devCodeCamp.</a></strong></p>
@@ -94,58 +94,66 @@
 		</div>
 	</div>
 
-	<div class="row greyback borderRad">
-		<div class="col-md-12">
-			<h2>Code Spotlight</h2>
-			<hr/>
+	<div  id="codeSpotlightSection">
+		<div class="row">
+		<div class="col-md-12"><p><hr></p></div></div> <!-- gap and line -->
+		<div class="row greyback borderRad">
+			<div class="col-md-12">
+				<h2>Code Spotlight</h2>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-md-12"><p></p></div></div> <!-- gap -->
+
+		<div class="row greyback borderRad VertFill">
+			<div class="col-sm-3 VertFill">
+				<p><a href="https://github.com/mkohlmann-he/DCC_Asteroids" target="_blank" class="centerVert"><img src="assets/img/Asteroid.png" alt="Asteroids" class="img-thumbnail img-rounded"></a></p>
+			</div>
+			<div class="col-sm-8 CodeBack">
+				<h4>Asteroids Clone</h4>
+				<p>During our third week of boot-camp we recreated the classic game Asteroids, using Pygame as our graphics engine. It was a team project involving myself and the rest of the helium team. My responsibilites were the main game engine loop, the start-up screen, and some helper classes with the explosion animation class, and the bullet class. The other guys ran the main ship, and asteroids class, and another handled all the sprite blitting, and collision detection.</p>
+			</div>
+		</div>
+		<div class="row greyback borderRad VertFill">
+			<div class="col-sm-3 VertFill">
+				<p><a href="https://github.com/mkohlmann-he/TimeTracker" target="_blank" class="centerVert"><img src="assets/img/TimeTrackerR1.PNG" alt="Time Tracker" class="img-thumbnail img-rounded"></a></p>
+			</div>
+			<div class="col-sm-8 CodeBack">
+				<h4>Time Tracker Rev 1.0</h4>
+				<p>During our second week of boot-camp we were able to choose a person project to work on. I wanted to learn about pythons Graphic User Interface libraries. This Time-Tracker widget is designed to sit on your desktop and with a simple 3 button interface, it will track the time you spend on a particular project. This version saves it directly to a tab-delimtied text file that you can import into Excel or any other spread-sheet. You can find Revesion 2 the repository as well, but it is still in progress (because the boot camp keeps us very busy). Revision 2 will incorporate MySQL integration with a remote server. Revision 3 (still in concept) will add a managers screen, to review and track time by project/budget/resources.</p>
+			</div>
 		</div>
 	</div>
 
-	<div class="row greyback borderRad VertFill">
-		<div class="col-sm-3 VertFill">
-			<p><a href="https://github.com/mkohlmann-he/DCC_Asteroids" target="_blank" class="centerVert"><img src="assets/img/Asteroid.png" alt="Asteroids" class="img-thumbnail img-rounded"></a></p>
+
+	<div id="interestSection">
+		<div class="row">
+		<div class="col-md-12"><p><hr></p></div></div> <!-- gap and line -->
+		<div class="row greyback borderRad">
+			<div class="col-md-12">
+				<h2>Interests</h2>
+			</div>
 		</div>
-		<div class="col-sm-8 CodeBack">
-			<h4>Asteroids Clone</h4>
-			<p>During our third week of boot-camp we recreated the classic game Asteroids, using Pygame as our graphics engine. It was a team project involving myself and the rest of the helium team. My responsibilites were the main game engine loop, the start-up screen, and some helper classes with the explosion animation class, and the bullet class. The other guys ran the main ship, and asteroids class, and another handled all the sprite blitting, and collision detection.</p>
+		<div class="row">
+		<div class="col-md-12"><p></p></div></div> <!-- gap -->
+
+		<div class="row greyback borderRad">
+			<div class="col-sm-4 InterestBack">
+				<h4>Robotics</h4>
+				<p>Prior to devCodeCamp, I was a professional robotics engineer by education and trade, doing the mechanical design of custom automation and industrial robotic and workcells for factories in south-eastern Wisconsin. Also maintaining the electrical and programming of the workcells. I also have a interest in hobby robotics, and do personal studies/research in artificial intelligence and mobile robotics in my own time.</p>
+				<p><a href="http://www.acieta.com/" target="_blank"><img src="http://cdlms-inc.com/examples/fr/FanucRobotics.jpg" alt="Industrial Robotics" class="img-thumbnail"></a></p>
+			</div>
+			<div class="col-sm-4 InterestBack">
+				<h4>Camping / Hiking</h4>
+				<p>Sometimes you just have to get away from the city and clear your head. One of my favorite camping spots is Rock Island in Door County, WI. Go to the end of the peninsual, take a car ferry to Washington Island, then a walking ferry to Rock Island. Pack-in, pack-out. Beautiful, quiet, with swimming and hiking to boot. Perfect.</p>
+				<p><a href="http://dnr.wi.gov/topic/parks/name/rockisland/" target="_blank"><img src="https://www.travelwisconsin.com/uploads/places/43/4399f007-dee0-4d58-af2b-f1a7bb2f0c8c-rock-island-state-park.jpg?preset=detail-slider-desktop" alt="Rock Island" class="img-thumbnail"></a></p>
+			</div>
+			<div class="col-sm-4 InterestBack">
+				<h4>Kickball</h4>
+				<p>Bar league kick-ball. Adult competition, in a game played by elementary schoolers. What more could you want?</p><p><a href="http://musasports.com/milwaukee/kickball/" target="_blank"><img src="https://pbs.twimg.com/profile_images/2976433331/98a1cfe21dabe40c7ad4de25718a5dcd_400x400.png" alt="MUSA Kickball" class="img-thumbnail"></a></p>
+			</div>
 		</div>
 	</div>
-	<div class="row greyback borderRad VertFill">
-		<div class="col-sm-3 VertFill">
-			<p><a href="https://github.com/mkohlmann-he/TimeTracker" target="_blank" class="centerVert"><img src="assets/img/TimeTrackerR1.PNG" alt="Time Tracker" class="img-thumbnail img-rounded"></a></p>
-		</div>
-		<div class="col-sm-8 CodeBack">
-			<h4>Time Tracker Rev 1.0</h4>
-			<p>During our second week of boot-camp we were able to choose a person project to work on. I wanted to learn about pythons Graphic User Interface libraries. This Time-Tracker widget is designed to sit on your desktop and with a simple 3 button interface, it will track the time you spend on a particular project. This version saves it directly to a tab-delimtied text file that you can import into Excel or any other spread-sheet. You can find Revesion 2 the repository as well, but it is still in progress (because the boot camp keeps us very busy). Revision 2 will incorporate MySQL integration with a remote server. Revision 3 (still in concept) will add a managers screen, to review and track time by project/budget/resources.</p>
-		</div>
-	</div>
-	<p><p>
-
-
-	<div class="row greyback borderRad">
-		<div class="col-md-12">
-			<h2>Interests</h2>
-			<hr/>
-		</div>
-	</div>
-
-	<div class="row greyback borderRad">
-		<div class="col-sm-4 InterestBack">
-			<h4>Robotics</h4>
-			<p>Prior to devCodeCamp, I was a professional robotics engineer by education and trade, doing the mechanical design of custom automation and industrial robotic and workcells for factories in south-eastern Wisconsin. Also maintaining the electrical and programming of the workcells. I also have a interest in hobby robotics, and do personal studies/research in artificial intelligence and mobile robotics in my own time.</p>
-			<p><a href="http://www.acieta.com/" target="_blank"><img src="http://cdlms-inc.com/examples/fr/FanucRobotics.jpg" alt="Industrial Robotics" class="img-thumbnail"></a></p>
-		</div>
-		<div class="col-sm-4 InterestBack">
-			<h4>Camping / Hiking</h4>
-			<p>Sometimes you just have to get away from the city and clear your head. One of my favorite camping spots is Rock Island in Door County, WI. Go to the end of the peninsual, take a car ferry to Washington Island, then a walking ferry to Rock Island. Pack-in, pack-out. Beautiful, quiet, with swimming and hiking to boot. Perfect.</p>
-			<p><a href="http://dnr.wi.gov/topic/parks/name/rockisland/" target="_blank"><img src="https://www.travelwisconsin.com/uploads/places/43/4399f007-dee0-4d58-af2b-f1a7bb2f0c8c-rock-island-state-park.jpg?preset=detail-slider-desktop" alt="Rock Island" class="img-thumbnail"></a></p>
-		</div>
-		<div class="col-sm-4 InterestBack">
-			<h4>Kickball</h4>
-			<p>Bar league kick-ball. Adult competition, in a game played by elementary schoolers. What more could you want?</p><p><a href="http://musasports.com/milwaukee/kickball/" target="_blank"><img src="https://pbs.twimg.com/profile_images/2976433331/98a1cfe21dabe40c7ad4de25718a5dcd_400x400.png" alt="MUSA Kickball" class="img-thumbnail"></a></p>
-		</div>
-	</div>
-
 
 
 
@@ -164,24 +172,20 @@
 
 
 
-
-
-
-   	<p></p>
-	<div class="row greyback borderRad"> 
-	  <div class="col-md-8"> 
-	    <h2>Blog</h2>
-	    <hr/>
-	    </div> 
-	  <div class="col-md-4"> 
-	    <span style="height:50px;"> </span> 
-	    <input type='text' class='search form-control col-md-2' id='search2' name="search2" placeholder="Search Blog" style="float:right;" />
-	  </div> 
-	</div> 
-
-	<div class="row"> 
-	  <hr/> 
-	</div> 
+	<div id="blogHeaderSection">
+		<div class="row">
+		<div class="col-md-12"><p><hr></p></div></div> <!-- gap and line -->
+		<div class="row greyback borderRad"> 
+		  	<div class="col-md-8"> 
+		    	<h2>Blog</h2>
+		   	</div> 
+			<div class="col-md-4"> 
+			    <span style="height:50px;"> </span> 
+		    	<input type='text' class='search form-control col-md-2' id='search2' name="search2" placeholder="Search Blog" style="float:right; margin-top:18px;" />
+		  	</div> 
+		</div> 
+		<div class="row"><p></p></div><!-- gap -->
+	</div>
 
 	<div id="blog" class="row"> 
 	  <!-- blog posts are generated here --> 

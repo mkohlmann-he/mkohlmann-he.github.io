@@ -46,9 +46,13 @@ function getblog() {
     var len = entries.length;
 
     // If SearchBox is Empty, Build the entire list from all the blogs (in reverse)
-    if ($("#search2").val() == null || $("#search2").val() == "") 
+    if ($("#search-second").val() == null || $("#search-second").val() == "") 
     {
-
+       	$("#welcomeSection").slideDown();
+    	$("#codeSpotlightSection").slideDown();
+    	$("#interestSection").slideDown();
+    	$("#blogHeaderSection").slideDown();
+    	$("#search2").show();
     	for (i in entries)
     	{
     		displayList.push(len - i - 1);
@@ -58,7 +62,12 @@ function getblog() {
     // Else, if there is a value in the search box, build the display list
     else
     {
-    	var searchValue = $("#search2").val().replace(/ /g,'');
+    	$("#welcomeSection").slideUp();
+    	$("#codeSpotlightSection").slideUp();
+    	$("#interestSection").slideUp();
+    	$("#blogHeaderSection").slideUp();
+    	$("#search2").hide();
+    	var searchValue = $("#search-second").val().replace(/ /g,'');
     	console.log("searching for: " + searchValue);
     	for (i in entries)
     	{
@@ -89,7 +98,7 @@ function pager(entries, displayIndex, page){
 	// Debug
 	console.log("Debug: pager")
 	//console.log(entries);
-	console.log("index list:" + displayIndex);
+	//console.log("index list:" + displayIndex);
 	//console.log("list length:" + displayIndex.length);
 	//console.log("page:" + page);
 	
@@ -162,8 +171,8 @@ function convertEntryToHTML (entry, key) {
   		"</small>" +
   		"<h4>" + entry["title"] +"</h4>" +
   		"<p>" + entry["text"] + "</p>" +
-  		"<hr/>" +
-  		"</div>";
+  		"</div><div class='col-sm-12'><p></p></div>";
+  		
 
   	return textEntry;
 };
@@ -183,27 +192,6 @@ function nextButton() {
 
 
 
-
-
-
-
-
-//
-// SEARCH FUNCTIONS
-//
-function getselection () {
-
-
-
-
-};
-
-
-
-
-
-//$(document).ready(getblog);
-
 $(document).ready(jqxhr.complete(function()
 	{
 		getblog();
@@ -212,13 +200,28 @@ $(document).ready(jqxhr.complete(function()
 
 
 // SearchBox Control,  On change character pressed
-$(document).ready(function()
+$(document).ready(jqxhr.complete(function()
+	{
+	$("#search-second").on('input propertychange paste', function()
+		{
+		blogPageNumber = 1;
+		console.log("TopSearch Triggered:" + $("#search-second").val());
+		$("#search2").val($("#search-second").val());
+		getblog();
+		
+		});
+}));
+
+// SearchBox Control,  On change character pressed
+$(document).ready(jqxhr.complete(function()
 	{
 	$("#search2").on('input propertychange paste', function()
 		{
 		blogPageNumber = 1;
-		console.log("Search Key Triggered:" + $("#search2").val());
+		console.log("BottomSearch Triggered:" + $("#search2").val());
+		$("#search-second").focus();
+		$("#search-second").val($("#search2").val());
 		getblog();
 		
 		});
-});
+}));
