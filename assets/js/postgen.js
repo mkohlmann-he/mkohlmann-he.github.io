@@ -39,7 +39,7 @@ function post(){
   var jsonField = ('{"entries":['  + '<br />');
   $.getJSON(urlRemote, function(data) {
     $.each(data.entries, function(key, val) {
-      var single = '{"date":"' + val.date + '", "title":"' + val.title + '", "text":"' + val.text.replace(/<br>/g, "&lt;br&gt;").replace(/"/g, '\\"') + '"}';
+      var single = '{"date":"' + val.date + '", "title":"' + val.title + '", "text":"' + val.text.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, '\\"') + '"}';
       //console.log(single);
       console.log("inside");
       jsonField += (single);
@@ -51,7 +51,7 @@ function post(){
         var t = getdate();
         var h = $("input#h").val();
         var c = $("textarea#c").val();
-        c = $("textarea#c").val().replace(/\n/g, "&lt;br&gt;");
+        c = $("textarea#c").val().replace(/\n/g, "&lt;br&gt;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, '\\"');
         var added = '{"date":"' + t + '", "title":"' + h + '", "text":"' + c + '"}';
         jsonField += (added);
         jsonField += ('<br />]}');
