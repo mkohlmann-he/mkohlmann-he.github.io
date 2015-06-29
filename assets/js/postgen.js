@@ -34,27 +34,34 @@ function getdate(){
 }
 
 function post(){
-  $("#json").append('{"entries":['  + '<br />');
-  $.getJSON('entries.json', function(data) {
+  //var urlLocal = "entries.json"
+  var urlRemote = "https://mkohlmann-he.github.io/entries.json"
+  var jsonField = ('{"entries":['  + '<br />');
+  $.getJSON(urlRemote, function(data) {
     $.each(data.entries, function(key, val) {
-      var single = '{"date":"' + val.date + '", "title":"' + val.title + '", "text":"' + val.text + '"}';
-      console.log(single);
-      $("#json").append(single);
+      var single = '{"date":"' + val.date + '", "title":"' + val.title + '", "text":"' + val.text.replace(/<br>/g, "&lt;br&gt;").replace(/"/g, '\\"') + '"}';
+      //console.log(single);
+      console.log("inside");
+      jsonField += (single);
       if((data.entries.length - 1) != key){
-        $("#json").append(',<br />');
+        jsonField += (',<br />');
       } else {
-        $("#json").append(',<br />');
+        jsonField += (',<br />');
         // new post
         var t = getdate();
         var h = $("input#h").val();
         var c = $("textarea#c").val();
         c = $("textarea#c").val().replace(/\n/g, "&lt;br&gt;");
         var added = '{"date":"' + t + '", "title":"' + h + '", "text":"' + c + '"}';
-        $("#json").append(added);
-        $("#json").append('<br />]}');
+        jsonField += (added);
+        jsonField += ('<br />]}');
       }
     });
+    console.log(jsonField)
+    document.getElementById("json").innerHTML = jsonField;
   });
+
+
   $("body").css('background-color', '#FFFFFF');
   $("html").css('background-color', '#FFFFFF');
   $("#getnewpost").hide();
